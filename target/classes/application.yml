@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: interview-example-project
+  devtools:
+    livereload:
+      enabled: true
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_spb3_interview_v1?createDatabaseIfNotExist=true&autoReconnect=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      hibernate:
+        ddl-auto: none
+      database: postgresql
+    servlet:
+      multipart:
+        max-file-size: 80MB
+    http:
+      multipart:
+        max-file-size: 80MB
+    output:
+      ansi:
+        enabled: always
+
+logging:
+  level:
+    org.spring.springframework.web: DEBUG
+    com.application: DEBUG
